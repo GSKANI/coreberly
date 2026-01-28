@@ -1,0 +1,236 @@
+/* Global Dark Admin Reset */
+.admin-container {
+  background: #000 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-box {
+  background: rgba(15, 23, 42, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  color: #fff;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-header h1 {
+  color: #fff !important;
+}
+
+.login-header p {
+  color: #94a3b8 !important;
+}
+
+.login-form label {
+  color: #cbd5e1 !important;
+}
+
+.login-form input {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #fff;
+}
+
+.login-button {
+  background: linear-gradient(90deg, #ef4444, #b91c1c) !important;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
+}
+
+/* Dashboard Sidebar & Core */
+.admin {
+  background: #020617 !important;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.admin-header {
+  background: rgba(15, 23, 42, 0.9) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.admin-sidebar {
+  background: #020617 !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.menu-item {
+  color: #94a3b8 !important;
+}
+
+.menu-item:hover {
+  background: rgba(239, 68, 68, 0.05) !important;
+  color: #ef4444 !important;
+}
+
+.menu-item.active {
+  background: rgba(239, 68, 68, 0.1) !important;
+  color: #ef4444 !important;
+  border-left-color: #ef4444 !important;
+}
+
+.admin-section {
+  background: rgba(15, 23, 42, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  color: #fff;
+}
+
+.admin-section h2 {
+  color: #fff !important;
+}
+
+/* 🚀 NEON TABLE STYLING (The User's Core Request) */
+.neon-table {
+  border-collapse: separate !important;
+  border-spacing: 0 8px !important;
+  margin-top: 2rem !important;
+}
+
+.neon-table thead tr {
+  background: transparent !important;
+}
+
+.neon-table th {
+  color: #64748b !important;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  border: none !important;
+  padding: 1.5rem 1rem !important;
+}
+
+.neon-table tbody tr {
+  background: rgba(30, 41, 59, 0.4) !important;
+  transition: all 0.3s ease;
+}
+
+.neon-table tbody tr:hover {
+  background: rgba(30, 41, 59, 0.7) !important;
+  transform: scale(1.005);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.neon-table td {
+  border: none !important;
+  padding: 1.2rem 1rem !important;
+  vertical-align: middle;
+}
+
+.neon-table td:first-child {
+  border-radius: 12px 0 0 12px;
+  border-left: 2px solid transparent;
+}
+
+.neon-table td:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+/* In-Table Branding */
+.admin-member {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.initial-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Neon Glows for Table Circles */
+.neon-red {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+}
+
+.neon-orange {
+  background: rgba(249, 115, 22, 0.1);
+  color: #f97316;
+  border-color: #f97316 !important;
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.3);
+}
+
+.neon-blue {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.neon-purple {
+  background: rgba(168, 85, 247, 0.1);
+  color: #a855f7;
+  border-color: #a855f7 !important;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+.neon-cyan {
+  background: rgba(6, 182, 212, 0.1);
+  color: #06b6d4;
+  border-color: #06b6d4 !important;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+}
+
+.neon-green {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border-color: #22c55e !important;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+}
+
+/* Badges */
+.badge.neon-success {
+  background: rgba(34, 197, 94, 0.1) !important;
+  color: #22c55e !important;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.badge.neon-info {
+  background: rgba(6, 182, 212, 0.1) !important;
+  color: #06b6d4 !important;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+/* Action Buttons */
+.edit-btn {
+  background: #334155 !important;
+  color: #fff !important;
+}
+
+.edit-btn:hover {
+  background: #475569 !important;
+}
+
+.delete-btn {
+  background: rgba(239, 68, 68, 0.1) !important;
+  color: #ef4444 !important;
+  border: 1px solid rgba(239, 68, 68, 0.2) !important;
+}
+
+.delete-btn:hover {
+  background: #ef4444 !important;
+  color: #fff !important;
+}
+
+.add-button {
+  background: #ef4444 !important;
+  border-radius: 8px !important;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}

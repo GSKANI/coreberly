@@ -1,0 +1,309 @@
+.pricing {
+  padding: 80px 20px;
+  background: #0f172a;
+  position: relative;
+  overflow: hidden;
+  color: #f8fafc;
+}
+
+.pricing::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatReverse 18s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.pricing::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.04) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.pricing-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.pricing .section-title {
+  margin-bottom: 0.5rem;
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+.pricing .section-subtitle {
+  margin-bottom: 4rem;
+  color: #94a3b8;
+}
+
+.pricing-section {
+  margin-bottom: 6rem;
+}
+
+.pricing-category-title {
+  font-family: 'Clash Display', sans-serif;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #f8fafc;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pricing-card {
+  background: #1e293b;
+  padding: 2.5rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #2563eb, #ff6b35, transparent);
+  transition: left 0.6s ease;
+}
+
+.pricing-card.featured {
+  border-color: #2563eb;
+  box-shadow: 0 30px 60px rgba(37, 99, 235, 0.2);
+  transform: scale(1.05);
+  position: relative;
+  z-index: 10;
+  background: #1e293b;
+  border: 2px solid #2563eb;
+}
+
+.pricing-card:not(.featured):hover {
+  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+  border-color: #2563eb;
+}
+
+.pricing-card:hover::before {
+  left: 100%;
+}
+
+.pricing-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #ff6b35, #ff8c42);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 5px 20px rgba(255, 107, 53, 0.4);
+  animation: scaleIn 0.5s ease-out;
+  z-index: 10;
+}
+
+.pricing-title {
+  font-family: 'Clash Display', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #f8fafc;
+}
+
+.pricing-hours {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-price {
+  font-family: 'Clash Display', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.pricing-card:hover .pricing-price {
+  color: #ff6b35;
+  text-shadow: 0 5px 20px rgba(255, 107, 53, 0.2);
+}
+
+.pricing-subtitle {
+  color: #999999;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-description {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.pricing-features li {
+  padding: 0.8rem 0;
+  color: #cbd5e1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-features li::before {
+  color: #2563eb;
+  margin-right: 0.8rem;
+  font-weight: bold;
+}
+
+.pricing-button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-button.primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+}
+
+.pricing-button.primary:hover {
+  background: linear-gradient(135deg, #ff6b35, #ff5015);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(255, 107, 53, 0.3);
+}
+
+.pricing-button.secondary {
+  background: transparent;
+  color: #2563eb;
+  border: 2.5px solid #2563eb;
+  transition: all 0.4s ease;
+}
+
+.pricing-button.secondary:hover {
+  background: #2563eb;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+}
+
+.pricing-cta {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(37, 99, 235, 0.3);
+}
+
+.pricing-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 12s ease-in-out infinite;
+}
+
+.pricing-cta h3 {
+  font-family: 'Clash Display', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.pricing-cta p {
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+  position: relative;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.pricing-cta .btn-primary {
+  background: white;
+  color: #2563eb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-cta .btn-primary:hover {
+  background: #f8f8f8;
+  color: #ff6b35;
+}
+
+@media (max-width: 768px) {
+  .pricing {
+    padding: 4rem 1rem;
+  }
+
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-price {
+    font-size: 2rem;
+  }
+
+  .pricing-category-title {
+    font-size: 1.5rem;
+  }
+}

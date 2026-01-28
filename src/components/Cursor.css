@@ -1,0 +1,104 @@
+.targeting-system-root {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 10000;
+}
+
+/* Base Group Styles */
+.core-diamond-group,
+.assembly-group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    will-change: transform;
+}
+
+.assembly-group {
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+.core-diamond-group {
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    /* Always on top */
+}
+
+/* 1. Diamond Shapes */
+.diamond-shape {
+    width: 12px;
+    height: 12px;
+    filter: drop-shadow(0 0 5px rgba(239, 68, 68, 0.4));
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 2. Assembly Components */
+.ring-flow-container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ring-flow-container svg {
+    filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.3));
+}
+
+/* 3. The Repeater Spikes */
+.repeater-spike {
+    position: absolute;
+    width: 2px;
+    background-color: #ef4444;
+    top: 50%;
+    left: 50%;
+    margin-left: -1px;
+    margin-top: -22px;
+    /* Set inside the circle */
+    transform-origin: center 22px;
+    transition: height 0.3s ease, background-color 0.3s ease, margin-top 0.3s ease;
+}
+
+/* 4. Atmosphere Properties */
+.atmosphere-dot {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.dot-visual {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -2px;
+    opacity: 0.5;
+    filter: blur(0.5px);
+}
+
+/* Desktop-Only Immortal Hiding */
+@media (hover: hover) and (pointer: fine) {
+
+    body,
+    * {
+        cursor: none !important;
+    }
+}
+
+/* Disable for mobile to save battery */
+@media (hover: none) {
+    .targeting-system-root {
+        display: none;
+    }
+}
