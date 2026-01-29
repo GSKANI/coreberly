@@ -143,9 +143,9 @@ const Contact = () => {
             <div className="connect-section">
               <h3>Connect With Us</h3>
               <div className="minimal-social-icons">
-                <a href="#" className="social-icon">𝕏</a>
+                <a href="#!" className="social-icon">𝕏</a>
                 <a href="https://www.linkedin.com/in/coreberly-a820713a9/" target="_blank" rel="noopener noreferrer" className="social-icon">in</a>
-                <a href="#" className="social-icon">⚙️</a>
+                <a href="#!" className="social-icon">⚙️</a>
               </div>
             </div>
 

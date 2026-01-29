@@ -12,10 +12,10 @@ const Footer = () => {
           <h3 className="footer-brand">Coreberly</h3>
           <p className="footer-description">A technology solutions company specializing in innovation, cloud infrastructure, and tech education.</p>
           <div className="footer-social">
-            <a href="#" target="_blank" rel="noopener noreferrer" title="Twitter">X</a>
+            <a href="#!" target="_blank" rel="noopener noreferrer" title="Twitter">X</a>
             <a href="https://www.linkedin.com/in/coreberly-a820713a9/" target="_blank" rel="noopener noreferrer" title="LinkedIn">LinkedIn</a>
-            <a href="#" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
-            <a href="#" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a>
+            <a href="#!" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
+            <a href="#!" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a>
           </div>
         </div>
 
@@ -55,9 +55,9 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>&copy; {currentYear} Coreberly. All rights reserved.</p>
         <div className="footer-links">
-          <a href="#privacy">Privacy Policy</a>
-          <a href="#terms">Terms of Service</a>
-          <a href="#cookies">Cookie Policy</a>
+          <a href="#!">Privacy Policy</a>
+          <a href="#!">Terms of Service</a>
+          <a href="#!">Cookie Policy</a>
         </div>
       </div>
     </footer>
