@@ -13,7 +13,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         </Link>
 
         <button
-          className="menu-toggle"
+          className={`menu-toggle ${isMenuOpen ? 'open' : ''}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <span></span>
@@ -26,10 +26,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link></li>
           <li><Link to="/services" onClick={() => setIsMenuOpen(false)}>Services</Link></li>
           <li><a href="/#pricing" onClick={() => setIsMenuOpen(false)}>Pricing</a></li>
-          <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
+          <li><Link to="/contact" className="nav-cta-mobile" onClick={() => setIsMenuOpen(false)}>Contact Us</Link></li>
         </ul>
-
-        <Link to="/contact" className="nav-cta">Contact Us</Link>
       </div>
     </nav>
   );
