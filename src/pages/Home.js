@@ -95,8 +95,13 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="section-divider">
-        ✦ Custom Development ✦ Cloud Solutions ✦ AI/ML ✦ Education ✦ Consulting ✦
+      <div className="section-divider-marquee">
+        <div className="marquee-track">
+          <span>✦ Custom Development ✦ Cloud Solutions ✦ AI/ML ✦ Education ✦ Consulting ✦</span>
+          <span>✦ Custom Development ✦ Cloud Solutions ✦ AI/ML ✦ Education ✦ Consulting ✦</span>
+          <span>✦ Custom Development ✦ Cloud Solutions ✦ AI/ML ✦ Education ✦ Consulting ✦</span>
+          <span>✦ Custom Development ✦ Cloud Solutions ✦ AI/ML ✦ Education ✦ Consulting ✦</span>
+        </div>
       </div>
 
       {/* Services Section */}

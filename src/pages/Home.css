@@ -165,7 +165,7 @@
 }
 
 .hero h1 span {
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(135deg, #d4af37, #f2d06b, #d4af37);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -283,7 +283,7 @@
   font-family: 'Clash Display', sans-serif;
   font-size: 3rem;
   font-weight: 700;
-  color: #60a5fa;
+  color: #d4af37;
   margin-bottom: 0.5rem;
 }
 
@@ -295,17 +295,58 @@
   letter-spacing: 1px;
 }
 
-/* Section Divider */
-.section-divider {
-  text-align: center;
-  padding: 4rem 2rem;
+/* Section Divider Marquee */
+.section-divider-marquee {
+  width: 100%;
+  overflow: hidden;
+  background: rgba(30, 41, 59, 0.4);
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 5;
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  gap: 0;
+  animation: scrollRight 40s linear infinite;
+  width: max-content;
+}
+
+.marquee-track span {
+  font-family: 'Clash Display', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
   color: #475569;
-  font-size: 1.3rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  font-weight: 600;
+  padding: 0 2rem;
   opacity: 0.6;
+  white-space: nowrap;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
+
+.marquee-track span:hover {
+  color: #d4af37;
+  opacity: 1;
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Adjusting the section-divider padding if still used elsewhere, but we replaced it in Home.js */
 
 /* Services Section */
 .services {
@@ -397,7 +438,7 @@
   font-family: 'Clash Display', sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #d4af37 0%, #f2d06b 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

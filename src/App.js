@@ -9,6 +9,7 @@ import Portfolio from './pages/Portfolio';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
+import CourseDetails from './pages/CourseDetails';
 import Cursor from './components/Cursor';
 import './App.css';
 
@@ -37,6 +38,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="/course/:courseId" element={<CourseDetails />} />
           </Routes>
         </main>
         <Footer />

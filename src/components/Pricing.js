@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Pricing.css';
 
 const Pricing = () => {
@@ -7,31 +8,64 @@ const Pricing = () => {
   const educationPricing = [
     {
       id: 1,
-      title: 'Self-Paced',
-      price: '$299',
-      subtitle: 'per course',
-      description: 'Learn at your own speed',
-      features: ['Lifetime access', 'Course materials', 'Video lectures', 'Assignments', 'Certificate of completion'],
-      badge: null
+      slug: 'full-stack-development',
+      title: 'Full Stack Development',
+      price: '₹2,000',
+      subtitle: 'Career Track',
+      description: 'Master frontend and backend with modern frameworks.',
+      features: ['MERN Stack', 'Real-world Projects', 'Job Placement Support', 'Certification'],
+      badge: 'Popular'
     },
     {
       id: 2,
-      title: 'Bootcamp',
-      price: '$3,999',
-      subtitle: '12-week program',
-      description: 'Intensive hands-on training',
-      features: ['Live instruction', 'Project-based learning', 'Career guidance', 'Job placement support', 'Industry network access'],
-      badge: 'Best Value',
+      slug: 'ai-machine-learning',
+      title: 'AI & Machine Learning',
+      price: '₹2,000',
+      subtitle: 'Next-Gen Tech',
+      description: 'Deep dive into neural networks and predictive modeling.',
+      features: ['Python & PyTorch', 'NLP & CV Projects', 'Advanced Math', 'Research Support'],
+      badge: 'Cutting Edge',
       featured: true
     },
     {
       id: 3,
-      title: 'Corporate Training',
-      price: '$199',
-      subtitle: 'per employee/month',
-      description: 'Tailored for your team',
-      features: ['Custom curriculum', 'On-site training', 'Progress tracking', 'Certified instructors', 'Team support'],
+      slug: 'hr-training',
+      title: 'HR Training',
+      price: '₹2,000',
+      subtitle: 'Corporate Skills',
+      description: 'Comprehensive human resource management and strategy.',
+      features: ['Payroll Management', 'Recruitment Strategy', 'Labor Laws', 'Soft Skills'],
       badge: null
+    },
+    {
+      id: 4,
+      slug: 'networking',
+      title: 'Networking',
+      price: '₹2,000',
+      subtitle: 'Infrastructure',
+      description: 'Master server management and network security.',
+      features: ['CCNA Prep', 'Cloud Infrastructure', 'Cybersecurity Basics', 'Hardware Lab'],
+      badge: null
+    },
+    {
+      id: 5,
+      slug: 'autocad',
+      title: 'AutoCAD',
+      price: '₹2,000',
+      subtitle: 'Design Engineering',
+      description: 'Learn 2D and 3D design for engineering and architecture.',
+      features: ['Architectural Design', 'Blueprints', '3D Modeling', 'Technical Drawing'],
+      badge: null
+    },
+    {
+      id: 6,
+      slug: 'data-science',
+      title: 'Data Science',
+      price: '₹2,000',
+      subtitle: 'Analytics Track',
+      description: 'Master data visualization, statistics, and big data.',
+      features: ['Pandas & NumPy', 'Tableau/PowerBI', 'Statistical Analysis', 'Big Data Tools'],
+      badge: 'In Demand'
     }
   ];
 
@@ -47,9 +81,12 @@ const Pricing = () => {
           <li key={i}>✓ {feature}</li>
         ))}
       </ul>
-      <button className={`pricing-button ${item.featured ? 'primary' : 'secondary'}`}>
+      <Link
+        to={`/course/${item.slug}`}
+        className={`pricing-button ${item.featured ? 'primary' : 'secondary'}`}
+      >
         Get Started
-      </button>
+      </Link>
     </div>
   );
 
