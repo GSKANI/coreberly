@@ -76,6 +76,16 @@ const Pricing = () => {
       description: 'Master data visualization, statistics, and big data.',
       features: ['Pandas & NumPy', 'Tableau/PowerBI', 'Statistical Analysis', 'Big Data Tools'],
       badge: 'In Demand'
+    },
+    {
+      id: 8,
+      slug: 'cybersecurity-digital-forensic',
+      title: 'Cybersecurity & Digital Forensic',
+      price: '₹2,000',
+      subtitle: 'Security Expert',
+      description: 'Master the skills to protect, defend, and investigate digital systems.',
+      features: ['Ethical Hacking', 'Network Security', 'Digital Forensics', 'Incident Response'],
+      badge: 'New'
     }
   ];
 

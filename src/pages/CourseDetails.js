@@ -150,6 +150,28 @@ const courseData = {
             'Global Certification'
         ],
         icon: '📊'
+    },
+    'cybersecurity-digital-forensic': {
+        title: 'Cybersecurity & Digital Forensic',
+        duration: '6 Months',
+        description: 'Become a defender of the digital realm. Learn to identify vulnerabilities, prevent cyber attacks, and conduct forensic investigations to trace digital evidence.',
+        curriculum: [
+            'Introduction to Cybersecurity & Ethics',
+            'Network Security & Protocol Analysis',
+            'Ethical Hacking & Penetration Testing',
+            'Digital Forensics Fundamentals',
+            'Incident Response & Threat Hunting',
+            'Cryptography & Data Protection',
+            'Legal & Regulatory Compliance (GDPR/ISO)',
+            'Advanced Forensic Tools & Techniques'
+        ],
+        features: [
+            'Virtual Cyber Labs',
+            'CTF (Capture The Flag) Challenges',
+            'Industry Standard Tools (Kali Linux, Wireshark)',
+            'Cybersecurity Certification'
+        ],
+        icon: '🛡️'
     }
 };
 
