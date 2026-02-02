@@ -184,6 +184,9 @@ const Home = () => {
 
       {/* Pricing Section */}
       <Pricing />
+
+      {/* Team Section */}
+      <Team />
     </div>
   );
 };
