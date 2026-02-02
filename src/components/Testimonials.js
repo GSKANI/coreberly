@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Testimonials.css';
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const testimonials = [
     {
@@ -79,6 +80,16 @@ const Testimonials = () => {
     }
   ];
 
+  useEffect(() => {
+    if (!isPaused) {
+      const interval = setInterval(() => {
+        setActiveIndex((prev) => (prev + 1) % testimonials.length);
+      }, 5000); // Change slide every 5 seconds
+
+      return () => clearInterval(interval);
+    }
+  }, [isPaused, testimonials.length]);
+
   const renderStars = (rating) => {
     return Array.from({ length: rating }).map((_, i) => (
       <span key={i} className="star">★</span>
@@ -100,7 +111,11 @@ const Testimonials = () => {
         <p className="section-subtitle">Hear from our satisfied clients and partners</p>
 
         {/* Featured Testimonial Carousel */}
-        <div className="testimonial-carousel">
+        <div
+          className="testimonial-carousel"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
           <button className="carousel-nav prev" onClick={prevTestimonial} aria-label="Previous">
             <span>‹</span>
           </button>
@@ -109,9 +124,12 @@ const Testimonials = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={testimonial.id}
-                className={`testimonial-slide ${
-                  index === activeIndex ? 'active' : ''
-                } ${index < activeIndex ? 'prev' : 'next'}`}
+                className={`testimonial-slide ${index === activeIndex
+                  ? 'active'
+                  : index < activeIndex
+                    ? 'prev'
+                    : 'next'
+                  }`}
               >
                 <div className="quote-mark">"</div>
                 <p className="testimonial-quote">{testimonial.quote}</p>

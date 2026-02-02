@@ -273,7 +273,13 @@ const CourseDetails = () => {
                     <h3>Ready to start your journey?</h3>
                     <p>Enroll now and get access to all course materials and mentorship.</p>
                     <div className="cta-buttons">
-                        <Link to="/contact" className="enroll-btn">Enroll Now</Link>
+                        <Link
+                            to="/enroll"
+                            state={{ courseName: course.title }}
+                            className="enroll-btn"
+                        >
+                            Enroll Now
+                        </Link>
                         <Link to="/" className="back-link">← Back to Plans</Link>
                     </div>
                 </motion.div>

@@ -12,10 +12,10 @@ const Footer = () => {
           <h3 className="footer-brand">Coreberly</h3>
           <p className="footer-description">A technology solutions company specializing in innovation, cloud infrastructure, and tech education.</p>
           <div className="footer-social">
-            <a href="#!" target="_blank" rel="noopener noreferrer" title="Twitter">X</a>
-            <a href="https://www.linkedin.com/in/coreberly-a820713a9/" target="_blank" rel="noopener noreferrer" title="LinkedIn">LinkedIn</a>
-            <a href="#!" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
-            <a href="#!" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a>
+            <a href="#!" target="_blank" rel="noopener noreferrer" title="Twitter / X">𝕏</a>
+            <a href="https://www.linkedin.com/in/coreberly-a820713a9/" target="_blank" rel="noopener noreferrer" title="LinkedIn">in</a>
+            <a href="#!" target="_blank" rel="noopener noreferrer" title="GitHub">Gh</a>
+            <a href="#!" target="_blank" rel="noopener noreferrer" title="Facebook">Fb</a>
           </div>
         </div>
 

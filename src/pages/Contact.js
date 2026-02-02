@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 import './Contact.css';
 
 const Contact = () => {
+  const location = useLocation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     projectType: '',
     message: ''
   });
+
+  useEffect(() => {
+    if (location.state?.courseName) {
+      setFormData(prev => ({
+        ...prev,
+        projectType: `Enrollment: ${location.state.courseName}`,
+        message: `I would like to enroll in the ${location.state.courseName} course.`
+      }));
+    }
+  }, [location.state]);
 
   const [submitted, setSubmitted] = useState(false);
 

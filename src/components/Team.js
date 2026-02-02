@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './Team.css';
 
@@ -12,6 +12,7 @@ const Team = () => {
       title: 'Founder & CEO',
       bio: 'Visionary leader driving the core engine of innovation and strategy at Coreberly.',
       initials: 'CK',
+      image: '/images/charannks.jpg',
       expertise: ['Leadership', 'Software Architecture', 'Strategic Growth'],
       experience: '4+ Years',
       color: 'neon-red'
@@ -22,6 +23,7 @@ const Team = () => {
       title: 'Co-Founder & CTO',
       bio: 'Pioneer in IoT and Full-stack systems, architecting high-performance tech stacks.',
       initials: 'SK',
+      image: '/images/kanigs.jpg',
       expertise: ['IoT Systems', 'Full-stack Dev', 'Tech Strategy'],
       experience: '3+ Years',
       color: 'neon-orange'
@@ -82,11 +84,35 @@ const Team = () => {
       title: 'AI Prompt Engineer',
       bio: 'Specializing in LLM optimization and engineering precise AI-driven workflows.',
       initials: 'V',
+      image: '/images/vignesh.jpg',
       expertise: ['LLM Training', 'AI Automation', 'NLP Logic'],
       experience: '2+ Years',
       color: 'neon-green'
     }
   ];
+
+  const [teamList, setTeamList] = useState(team);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTeamList(prevList => {
+        // Separate the top row (first 4 members) from the rest
+        const upperRow = prevList.slice(0, 4);
+        const restOfTeam = prevList.slice(4);
+
+        // Shuffle only the upper row
+        for (let i = upperRow.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [upperRow[i], upperRow[j]] = [upperRow[j], upperRow[i]];
+        }
+
+        // Combine back together
+        return [...upperRow, ...restOfTeam];
+      });
+    }, 4000); // Shuffles every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [team]);
 
   return (
     <section id="team" className="team-section">
@@ -104,22 +130,28 @@ const Team = () => {
         </motion.div>
 
         <div className="team-grid">
-          {team.map((member, index) => (
+          {teamList.map((member) => (
             <motion.div
+              layout // Enables smooth layout animations during reordering
               key={member.id}
               className={`team-card-v2 ${member.color}`}
-              initial={{ opacity: 0, scale: 0.9, y: 30 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
               onMouseEnter={() => setHoveredMember(member.id)}
               onMouseLeave={() => setHoveredMember(null)}
             >
-              <div className="card-scanner-line"></div>
+              { }
 
               <div className="member-avatar-wrapper">
                 <div className="avatar-ring"></div>
-                <div className="member-avatar">{member.initials}</div>
+                <div className="member-avatar">
+                  {member.image ? (
+                    <img src={member.image} alt={member.name} className="member-img-real" />
+                  ) : (
+                    member.initials
+                  )}
+                </div>
               </div>
 
               <div className="member-info">
