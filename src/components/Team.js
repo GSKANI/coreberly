@@ -2,95 +2,94 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './Team.css';
 
+const team = [
+  {
+    id: 1,
+    name: 'Charann K S',
+    title: 'Founder & CEO',
+    bio: 'Visionary leader driving the core engine of innovation and strategy at Coreberly.',
+    initials: 'CK',
+    image: '/images/charannks.jpg',
+    expertise: ['Leadership', 'Software Architecture', 'Strategic Growth'],
+    experience: '4+ Years',
+    color: 'neon-red'
+  },
+  {
+    id: 2,
+    name: 'Kani.G.S',
+    title: 'Co-Founder & CTO',
+    bio: 'Pioneer in IoT and Full-stack systems, architecting high-performance tech stacks.',
+    initials: 'SK',
+    image: '/images/kanigs.jpg',
+    expertise: ['IoT Systems', 'Full-stack Dev', 'Tech Strategy'],
+    experience: '3+ Years',
+    color: 'neon-orange'
+  },
+  {
+    id: 7,
+    name: 'Anish Viswanathan VR',
+    title: 'COO & Data Engineer',
+    bio: 'Driving operational excellence and data-driven strategies to scale Coreberly’s infrastructure.',
+    initials: 'AV',
+    expertise: ['Data Engineering', 'Operations', 'Strategy'],
+    experience: '3+ Years',
+    color: 'neon-yellow'
+  },
+  {
+    id: 3,
+    name: 'Kishore Kumar',
+    title: 'Lead Frontend Engineer',
+    bio: 'Expert in crafting pixel-perfect, high-performance user interfaces with modern React.',
+    initials: 'KK',
+    expertise: ['React.js', 'Animation', 'UI Performance'],
+    experience: '3+ Years',
+    color: 'neon-blue'
+  },
+  {
+    id: 4,
+    name: 'Reshma Shanmugam',
+    title: 'Frontend Engineer',
+    bio: 'Bridging design and code with elegant, responsive, and user-centric web applications.',
+    initials: 'RS',
+    expertise: ['Modern UI/UX', 'CSS Architecture', 'Frontend Logic'],
+    experience: '2+ Years',
+    color: 'neon-purple'
+  },
+  {
+    id: 5,
+    name: 'Pavithra',
+    title: 'Backend Engineer',
+    bio: 'Architecting robust, secure, and scalable server-side systems and databases.',
+    initials: 'P',
+    expertise: ['Node.js', 'PostgreSQL', 'Cloud Infrastructure'],
+    experience: '2+ Years',
+    color: 'neon-cyan'
+  },
+  {
+    id: 8,
+    name: 'Arthiya AP',
+    title: 'Cybersecurity & Digital Forensic',
+    bio: 'Safeguarding digital frontiers with advanced threat detection and forensic analysis.',
+    initials: 'AA',
+    expertise: ['Cybersecurity', 'Digital Forensics', 'Ethical Hacking'],
+    experience: '2+ Years',
+    color: 'neon-pink'
+  },
+  {
+    id: 6,
+    name: 'Vignesh',
+    title: 'AI Prompt Engineer',
+    bio: 'Specializing in LLM optimization and engineering precise AI-driven workflows.',
+    initials: 'V',
+    image: '/images/vignesh.jpg',
+    expertise: ['LLM Training', 'AI Automation', 'NLP Logic'],
+    experience: '2+ Years',
+    color: 'neon-green'
+  }
+];
+
 const Team = () => {
   const [hoveredMember, setHoveredMember] = useState(null);
-
-  const team = [
-    {
-      id: 1,
-      name: 'Charann K S',
-      title: 'Founder & CEO',
-      bio: 'Visionary leader driving the core engine of innovation and strategy at Coreberly.',
-      initials: 'CK',
-      image: '/images/charannks.jpg',
-      expertise: ['Leadership', 'Software Architecture', 'Strategic Growth'],
-      experience: '4+ Years',
-      color: 'neon-red'
-    },
-    {
-      id: 2,
-      name: 'Kani.G.S',
-      title: 'Co-Founder & CTO',
-      bio: 'Pioneer in IoT and Full-stack systems, architecting high-performance tech stacks.',
-      initials: 'SK',
-      image: '/images/kanigs.jpg',
-      expertise: ['IoT Systems', 'Full-stack Dev', 'Tech Strategy'],
-      experience: '3+ Years',
-      color: 'neon-orange'
-    },
-    {
-      id: 7,
-      name: 'Anish Viswanathan VR',
-      title: 'COO & Data Engineer',
-      bio: 'Driving operational excellence and data-driven strategies to scale Coreberly’s infrastructure.',
-      initials: 'AV',
-      expertise: ['Data Engineering', 'Operations', 'Strategy'],
-      experience: '3+ Years',
-      color: 'neon-yellow'
-    },
-    {
-      id: 3,
-      name: 'Kishore Kumar',
-      title: 'Lead Frontend Engineer',
-      bio: 'Expert in crafting pixel-perfect, high-performance user interfaces with modern React.',
-      initials: 'KK',
-      expertise: ['React.js', 'Animation', 'UI Performance'],
-      experience: '3+ Years',
-      color: 'neon-blue'
-    },
-    {
-      id: 4,
-      name: 'Reshma Shanmugam',
-      title: 'Frontend Engineer',
-      bio: 'Bridging design and code with elegant, responsive, and user-centric web applications.',
-      initials: 'RS',
-      expertise: ['Modern UI/UX', 'CSS Architecture', 'Frontend Logic'],
-      experience: '2+ Years',
-      color: 'neon-purple'
-    },
-    {
-      id: 5,
-      name: 'Pavithra',
-      title: 'Backend Engineer',
-      bio: 'Architecting robust, secure, and scalable server-side systems and databases.',
-      initials: 'P',
-      expertise: ['Node.js', 'PostgreSQL', 'Cloud Infrastructure'],
-      experience: '2+ Years',
-      color: 'neon-cyan'
-    },
-    {
-      id: 8,
-      name: 'Arthiya AP',
-      title: 'Cybersecurity & Digital Forensic',
-      bio: 'Safeguarding digital frontiers with advanced threat detection and forensic analysis.',
-      initials: 'AA',
-      expertise: ['Cybersecurity', 'Digital Forensics', 'Ethical Hacking'],
-      experience: '2+ Years',
-      color: 'neon-pink'
-    },
-    {
-      id: 6,
-      name: 'Vignesh',
-      title: 'AI Prompt Engineer',
-      bio: 'Specializing in LLM optimization and engineering precise AI-driven workflows.',
-      initials: 'V',
-      image: '/images/vignesh.jpg',
-      expertise: ['LLM Training', 'AI Automation', 'NLP Logic'],
-      experience: '2+ Years',
-      color: 'neon-green'
-    }
-  ];
-
   const [teamList, setTeamList] = useState(team);
 
   useEffect(() => {
