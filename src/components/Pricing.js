@@ -8,13 +8,23 @@ const Pricing = () => {
   const educationPricing = [
     {
       id: 1,
-      slug: 'full-stack-development',
-      title: 'Full Stack Development',
+      slug: 'frontend-development',
+      title: 'Frontend Development',
       price: '₹2,000',
-      subtitle: 'Career Track',
-      description: 'Master frontend and backend with modern frameworks.',
-      features: ['MERN Stack', 'Real-world Projects', 'Job Placement Support', 'Certification'],
+      subtitle: 'Frontend Specialist',
+      description: 'Master the art of building responsive and interactive user interfaces.',
+      features: ['HTML, CSS, JavaScript', 'React.js Mastery', 'UI/UX Principles', 'Performance Optimization'],
       badge: 'Popular'
+    },
+    {
+      id: 7,
+      slug: 'backend-development',
+      title: 'Backend Development',
+      price: '₹2,000',
+      subtitle: 'Backend Specialist',
+      description: 'Build robust, scalable server-side applications and secure databases.',
+      features: ['Node.js & Express', 'Database Management', 'API Architecture', 'Cloud Deployment'],
+      badge: null
     },
     {
       id: 2,

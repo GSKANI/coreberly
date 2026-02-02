@@ -51,8 +51,8 @@
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .team-card-v2 {
@@ -379,4 +379,52 @@
 .neon-green:hover .skill-tag {
   border-color: rgba(34, 197, 94, 0.3);
   color: #22c55e;
+}
+
+/* Neon Pink (A) */
+.neon-pink {
+  border-color: rgba(236, 72, 153, 0.2);
+}
+
+.neon-pink:hover {
+  border-color: #ec4899;
+  box-shadow: 0 0 30px rgba(236, 72, 153, 0.2);
+}
+
+.neon-pink .member-role {
+  color: #ec4899;
+  text-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
+}
+
+.neon-pink .avatar-ring {
+  border-color: rgba(236, 72, 153, 0.3);
+}
+
+.neon-pink:hover .skill-tag {
+  border-color: rgba(236, 72, 153, 0.3);
+  color: #ec4899;
+}
+
+/* Neon Yellow (A) */
+.neon-yellow {
+  border-color: rgba(234, 179, 8, 0.2);
+}
+
+.neon-yellow:hover {
+  border-color: #eab308;
+  box-shadow: 0 0 30px rgba(234, 179, 8, 0.2);
+}
+
+.neon-yellow .member-role {
+  color: #eab308;
+  text-shadow: 0 0 10px rgba(234, 179, 8, 0.5);
+}
+
+.neon-yellow .avatar-ring {
+  border-color: rgba(234, 179, 8, 0.3);
+}
+
+.neon-yellow:hover .skill-tag {
+  border-color: rgba(234, 179, 8, 0.3);
+  color: #eab308;
 }

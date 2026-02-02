@@ -38,12 +38,14 @@
   transform: scale(1.05);
 }
 
+/* Desktop Layout */
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 3rem;
-  margin: 0;
+  gap: 2.5rem;
+  margin: 0 auto;
   padding: 0;
+  align-items: center;
 }
 
 .nav-links a {
@@ -76,7 +78,7 @@
   width: 100%;
 }
 
-/* CTA Button Styling (Desktop & Mobile) */
+/* Mobile CTA Button Styles (re-added) */
 .nav-links li a.nav-cta-mobile {
   padding: 0.8rem 2rem;
   background: linear-gradient(135deg, var(--primary), #0052cc);
@@ -89,7 +91,6 @@
 
 .nav-links li a.nav-cta-mobile::before {
   display: none;
-  /* Remove underline effect */
 }
 
 .nav-links li a.nav-cta-mobile:hover {
@@ -97,6 +98,28 @@
   transform: translateY(-3px);
   box-shadow: 0 12px 35px rgba(0, 102, 255, 0.3);
   color: white;
+}
+
+.nav-cta-desktop {
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, var(--primary), #0052cc);
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0, 102, 255, 0.2);
+}
+
+.nav-cta-desktop:hover {
+  background: linear-gradient(135deg, var(--accent), #ff5015);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 102, 255, 0.3);
+  color: white;
+}
+
+.mobile-only {
+  display: none;
 }
 
 /* Menu Toggle (Hamburger) */
@@ -108,7 +131,6 @@
   cursor: pointer;
   gap: 6px;
   z-index: 1001;
-  /* Above the overlay */
 }
 
 .menu-toggle span {
@@ -135,10 +157,19 @@
 }
 
 /* MOBILE RESPONSIVE STYLES */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .menu-toggle {
     display: flex;
   }
+
+  .nav-cta-desktop {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
 
   /* Full Screen Unique Overlay */
   .nav-links {

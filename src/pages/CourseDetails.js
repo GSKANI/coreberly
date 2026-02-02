@@ -4,26 +4,47 @@ import { motion } from 'framer-motion';
 import './CourseDetails.css';
 
 const courseData = {
-    'full-stack-development': {
-        title: 'Full Stack Development',
-        duration: '6 Months',
-        description: 'A comprehensive program designed to take you from a beginner to a professional full-stack developer. Master both frontend and backend technologies with real-world projects.',
+    'frontend-development': {
+        title: 'Frontend Development',
+        duration: '3 Months',
+        description: 'Become a specialist in building modern, responsive, and high-performance web interfaces using the latest frontend technologies.',
         curriculum: [
-            'Frontend Fundamentals (HTML5, CSS3, Modern JS)',
-            'React.js & State Management (Redux/Context API)',
-            'Backend Development with Node.js & Express',
-            'Database Management (MongoDB, PostgreSQL)',
-            'API Design & Integration',
-            'Deployment & Cloud Basics (AWS/Heroku)',
-            'Capstone Project & Portfolio Building'
+            'HTML5, CSS3 & Modern JavaScript (ES6+)',
+            'Advanced CSS (Flexbox, Grid, Animations)',
+            'React.js Fundamentals & Hooks',
+            'State Management with Redux/Context',
+            'Responsive Design & Mobile-First Approach',
+            'API Integration & Asynchronous JS',
+            'Frontend Performance & Optimization'
         ],
         features: [
-            'Live Interactive Sessions',
-            '1-on-1 Mentorship',
-            'Job Placement Assistance',
-            'Industry Recognized Certificate'
+            'Real-world UI Projects',
+            'Code Reviews & Feedback',
+            'Portfolio Development',
+            'Frontend Certification'
         ],
         icon: '💻'
+    },
+    'backend-development': {
+        title: 'Backend Development',
+        duration: '3 Months',
+        description: 'Master server-side programming, database management, and API architecture to build robust and scalable web applications.',
+        curriculum: [
+            'Node.js & Runtime Environment',
+            'Express.js Framework & Middleware',
+            'RESTful API Design & Best Practices',
+            'Database Design (MongoDB & PostgreSQL)',
+            'Authentication & Security (JWT, OAuth)',
+            'Server Deployment & DevOps Basics',
+            'System Architecture Principles'
+        ],
+        features: [
+            'Scalable Architecture Design',
+            'Database Optimization Labs',
+            'Security Best Practices',
+            'Backend Certification'
+        ],
+        icon: '⚙️'
     },
     'ai-machine-learning': {
         title: 'AI & Machine Learning',

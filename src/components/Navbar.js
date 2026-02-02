@@ -25,9 +25,13 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
           <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link></li>
           <li><Link to="/services" onClick={() => setIsMenuOpen(false)}>Services</Link></li>
-          <li><a href="/#pricing" onClick={() => setIsMenuOpen(false)}>Pricing</a></li>
-          <li><Link to="/contact" className="nav-cta-mobile" onClick={() => setIsMenuOpen(false)}>Contact Us</Link></li>
+          <li><a href="/#team" onClick={() => setIsMenuOpen(false)}>Team</a></li>
+          <li><a href="/#pricing" onClick={() => setIsMenuOpen(false)}>Courses</a></li>
+          <li><Link to="/blog" onClick={() => setIsMenuOpen(false)}>Blog</Link></li>
+          <li className="mobile-only"><Link to="/contact" className="nav-cta-mobile" onClick={() => setIsMenuOpen(false)}>Contact Us</Link></li>
         </ul>
+
+        <Link to="/contact" className="nav-cta-desktop">Contact Us</Link>
       </div>
     </nav>
   );

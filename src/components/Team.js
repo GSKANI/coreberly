@@ -27,6 +27,16 @@ const Team = () => {
       color: 'neon-orange'
     },
     {
+      id: 7,
+      name: 'Anish Viswanathan VR',
+      title: 'COO & Data Engineer',
+      bio: 'Driving operational excellence and data-driven strategies to scale Coreberly’s infrastructure.',
+      initials: 'AV',
+      expertise: ['Data Engineering', 'Operations', 'Strategy'],
+      experience: '3+ Years',
+      color: 'neon-yellow'
+    },
+    {
       id: 3,
       name: 'Kishore Kumar',
       title: 'Lead Frontend Engineer',
@@ -55,6 +65,16 @@ const Team = () => {
       expertise: ['Node.js', 'PostgreSQL', 'Cloud Infrastructure'],
       experience: '2+ Years',
       color: 'neon-cyan'
+    },
+    {
+      id: 8,
+      name: 'Arthiya AP',
+      title: 'Cybersecurity & Digital Forensic',
+      bio: 'Safeguarding digital frontiers with advanced threat detection and forensic analysis.',
+      initials: 'AA',
+      expertise: ['Cybersecurity', 'Digital Forensics', 'Ethical Hacking'],
+      experience: '2+ Years',
+      color: 'neon-pink'
     },
     {
       id: 6,
