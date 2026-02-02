@@ -111,7 +111,7 @@ const Team = () => {
     }, 4000); // Shuffles every 4 seconds
 
     return () => clearInterval(interval);
-  }, [team]);
+  }, []);
 
   return (
     <section id="team" className="team-section">
