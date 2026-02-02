@@ -107,7 +107,7 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="testimonials">
       <div className="testimonials-container">
-        <h2 className="section-title">Built on Trust</h2>
+        <h2 className="section-title">Built on <span>Trust</span></h2>
         <p className="section-subtitle">Hear from our satisfied clients and partners</p>
 
         {/* Featured Testimonial Carousel */}
