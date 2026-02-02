@@ -86,6 +86,16 @@ const Pricing = () => {
       description: 'Master the skills to protect, defend, and investigate digital systems.',
       features: ['Ethical Hacking', 'Network Security', 'Digital Forensics', 'Incident Response'],
       badge: 'New'
+    },
+    {
+      id: 9,
+      slug: 'digital-marketing',
+      title: 'Digital Marketing',
+      price: '₹2,000',
+      subtitle: 'Marketing Pro',
+      description: 'Master SEO, SEM, and Social Media to grow brands online.',
+      features: ['SEO & SEM Mastery', 'Social Media Strategy', 'Email Marketing', 'Google Analytics'],
+      badge: 'Trending'
     }
   ];
 

@@ -172,6 +172,27 @@ const courseData = {
             'Cybersecurity Certification'
         ],
         icon: '🛡️'
+    },
+    'digital-marketing': {
+        title: 'Digital Marketing',
+        duration: '3 Months',
+        description: 'Drive growth and build brands in the digital age. Learn to create comprehensive marketing strategies using SEO, social media, and analytics.',
+        curriculum: [
+            'Digital Marketing Fundamentals',
+            'SEO (Search Engine Optimization) Mastery',
+            'SEM & Google Ads (PPC)',
+            'Social Media Marketing (Instagram, LinkedIn)',
+            'Content Marketing & Strategy',
+            'Email Marketing & Automation',
+            'Web Analytics (Google Analytics 4)'
+        ],
+        features: [
+            'Live Campaign Projects',
+            'Google/HubSpot Certifications',
+            'Marketing Tool Training',
+            'Portfolio Building'
+        ],
+        icon: '📢'
     }
 };
 
