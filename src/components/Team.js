@@ -41,6 +41,7 @@ const team = [
     title: 'Lead Frontend Engineer',
     bio: 'Expert in crafting pixel-perfect, high-performance user interfaces with modern React.',
     initials: 'KK',
+    image: '/images/kishore.jpg',
     expertise: ['React.js', 'Animation', 'UI Performance'],
     experience: '3+ Years',
     color: 'neon-blue'
@@ -61,6 +62,7 @@ const team = [
     title: 'Backend Engineer',
     bio: 'Architecting robust, secure, and scalable server-side systems and databases.',
     initials: 'P',
+    image: '/images/pavithra.jpg',
     expertise: ['Node.js', 'PostgreSQL', 'Cloud Infrastructure'],
     experience: '2+ Years',
     color: 'neon-cyan'
