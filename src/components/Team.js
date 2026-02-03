@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './Team.css';
 
@@ -92,28 +92,6 @@ const team = [
 
 const Team = () => {
   const [hoveredMember, setHoveredMember] = useState(null);
-  const [teamList, setTeamList] = useState(team);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTeamList(prevList => {
-        // Separate the top row (first 4 members) from the rest
-        const upperRow = prevList.slice(0, 4);
-        const restOfTeam = prevList.slice(4);
-
-        // Shuffle only the upper row
-        for (let i = upperRow.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [upperRow[i], upperRow[j]] = [upperRow[j], upperRow[i]];
-        }
-
-        // Combine back together
-        return [...upperRow, ...restOfTeam];
-      });
-    }, 4000); // Shuffles every 4 seconds
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section id="team" className="team-section">
@@ -131,13 +109,13 @@ const Team = () => {
         </motion.div>
 
         <div className="team-grid">
-          {teamList.map((member) => (
+          {team.map((member) => (
             <motion.div
-              layout // Enables smooth layout animations during reordering
               key={member.id}
               className={`team-card-v2 ${member.color}`}
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5 }}
               onMouseEnter={() => setHoveredMember(member.id)}
               onMouseLeave={() => setHoveredMember(null)}
