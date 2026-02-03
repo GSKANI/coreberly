@@ -166,22 +166,7 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* All Testimonials Grid */}
-        <div className="testimonials-grid">
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="testimonial-card">
-              <div className="card-glow"></div>
-              <div className={`avatar-small ${testimonial.color}`}>
-                {testimonial.initials}
-              </div>
-              <p className="quote-short">{testimonial.quote.substring(0, 80)}...</p>
-              <div className="card-footer">
-                <h5>{testimonial.name}</h5>
-                <p className="role">{testimonial.title}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* All Testimonials Grid Removed */}
       </div>
     </section>
   );
