@@ -83,10 +83,11 @@ const team = [
     title: 'AI Prompt Engineer',
     bio: 'Specializing in LLM optimization and engineering precise AI-driven workflows.',
     initials: 'V',
-    image: '/images/vignesh.jpg',
+    image: '/images/vignesh_new.jpg',
     expertise: ['LLM Training', 'AI Automation', 'NLP Logic'],
     experience: '2+ Years',
-    color: 'neon-green'
+    color: 'neon-green',
+    imgFit: 'contain'
   }
 ];
 
@@ -126,7 +127,12 @@ const Team = () => {
                 <div className="avatar-ring"></div>
                 <div className="member-avatar">
                   {member.image ? (
-                    <img src={member.image} alt={member.name} className="member-img-real" />
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="member-img-real"
+                      style={member.imgFit ? { objectFit: member.imgFit } : {}}
+                    />
                   ) : (
                     member.initials
                   )}
