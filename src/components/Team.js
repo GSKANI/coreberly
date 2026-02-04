@@ -52,6 +52,7 @@ const team = [
     title: 'Frontend Engineer',
     bio: 'Bridging design and code with elegant, responsive, and user-centric web applications.',
     initials: 'RS',
+    image: '/images/reshma.jpg',
     expertise: ['Modern UI/UX', 'CSS Architecture', 'Frontend Logic'],
     experience: '2+ Years',
     color: 'neon-purple'
