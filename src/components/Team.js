@@ -31,6 +31,7 @@ const team = [
     title: 'COO & Data Engineer',
     bio: 'Driving operational excellence and data-driven strategies to scale Coreberly’s infrastructure.',
     initials: 'AV',
+    image: '/images/anish viswanathan.jpeg',
     expertise: ['Data Engineering', 'Operations', 'Strategy'],
     experience: '3+ Years',
     color: 'neon-yellow'
@@ -74,6 +75,7 @@ const team = [
     title: 'Cybersecurity & Digital Forensic',
     bio: 'Safeguarding digital frontiers with advanced threat detection and forensic analysis.',
     initials: 'AA',
+    image: '/images/arthiya.jpeg',
     expertise: ['Cybersecurity', 'Digital Forensics', 'Ethical Hacking'],
     experience: '2+ Years',
     color: 'neon-pink'
@@ -92,9 +94,59 @@ const team = [
   }
 ];
 
-const Team = () => {
-  const [hoveredMember, setHoveredMember] = useState(null);
+const TeamCard = ({ member }) => {
+  const [imageError, setImageError] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
+  return (
+    <motion.div
+      key={member.id}
+      className={`team-card-v2 ${member.color}`}
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <div className="member-avatar-wrapper">
+        <div className="avatar-ring"></div>
+        <div className="member-avatar">
+          {member.image && !imageError ? (
+            <img
+              src={member.image}
+              alt={member.name}
+              className="member-img-real"
+              style={member.imgFit ? { objectFit: member.imgFit } : {}}
+              onError={() => setImageError(true)}
+            />
+          ) : (
+            <span className="initials-fallback">{member.initials}</span>
+          )}
+        </div>
+      </div>
+
+      <div className="member-info">
+        <h3 className="member-name">{member.name}</h3>
+        <span className="member-role">{member.title}</span>
+        <p className="member-bio">{member.bio}</p>
+      </div>
+
+      <div className="member-expertise-list">
+        {member.expertise.map((skill, i) => (
+          <span key={i} className="skill-tag">{skill}</span>
+        ))}
+      </div>
+
+      <div className="card-footer">
+        <span className="exp-badge">EXP: {member.experience}</span>
+        <div className={`status-dot ${hovered ? 'active' : ''}`}></div>
+      </div>
+    </motion.div>
+  );
+};
+
+const Team = () => {
   return (
     <section id="team" className="team-section">
       <div className="section-blob"></div>
@@ -112,51 +164,7 @@ const Team = () => {
 
         <div className="team-grid">
           {team.map((member) => (
-            <motion.div
-              key={member.id}
-              className={`team-card-v2 ${member.color}`}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              onMouseEnter={() => setHoveredMember(member.id)}
-              onMouseLeave={() => setHoveredMember(null)}
-            >
-              { }
-
-              <div className="member-avatar-wrapper">
-                <div className="avatar-ring"></div>
-                <div className="member-avatar">
-                  {member.image ? (
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="member-img-real"
-                      style={member.imgFit ? { objectFit: member.imgFit } : {}}
-                    />
-                  ) : (
-                    member.initials
-                  )}
-                </div>
-              </div>
-
-              <div className="member-info">
-                <h3 className="member-name">{member.name}</h3>
-                <span className="member-role">{member.title}</span>
-                <p className="member-bio">{member.bio}</p>
-              </div>
-
-              <div className="member-expertise-list">
-                {member.expertise.map((skill, i) => (
-                  <span key={i} className="skill-tag">{skill}</span>
-                ))}
-              </div>
-
-              <div className="card-footer">
-                <span className="exp-badge">EXP: {member.experience}</span>
-                <div className={`status-dot ${hoveredMember === member.id ? 'active' : ''}`}></div>
-              </div>
-            </motion.div>
+            <TeamCard key={member.id} member={member} />
           ))}
         </div>
       </div>
